@@ -1,0 +1,78 @@
+<%- include('partials/header') %>
+  <main>
+    <%- include('partials/sidebar') %>
+        <div class="content">
+          <h3>Please fill out the following form:</h3><br>
+          <form id="findform" action="/find" method="post">
+            <label for="animal"><b>Cat or Dog:</b></label>
+            <select id="animal" name="animal" class="form-select" aria-label="Default select example">
+                <option value="">Select</option>
+                <option value="Cat">Cat</option>
+                <option value="Dog">Dog</option>
+              </select>
+              <br>
+              <label for="breed"><b>Breed:</b></label>
+              <select id="breed" name="breed" class="form-select" aria-label="Default select example">
+                <option value="">Select</option>
+                <option value="Siamese">Cat: Siamese</option>
+                <option value="Persian">Cat: Persian</option>
+                <option value="Sphynx">Cat: Sphynx</option>
+                <option value="Short Hair">Cat: Short Hair</option>
+                <option value="Labrador">Dog: Labrador</option>
+                <option value="Golden Retriever">Dog: Golden Retriever</option>
+                <option value="German Shepherd">Dog: German Shepherd</option>
+                <option value="na">Doesn't Matter</option>
+              </select>
+              <br>
+              <label for="age"><b>Preferred Age:</b></label>
+              <select id="age" name="age" class="form-select" aria-label="Default select example">
+                <option value="">Select</option>
+                <option value="0-1">0-1</option>
+                <option value="1-5">1-5</option>
+                <option value="5-10">5-10</option>
+                <option value="10+">10+</option>
+                <option value="na">Doesn't Matter</option>
+              </select>
+              <br>
+              <label for="gender"><b>Preferred Gender:</b></label>
+              <select id="gender" name="gender" class="form-select" aria-label="Default select example">
+                <option value="">Select</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="na">Doesn't Matter</option>
+              </select>
+              <br>
+              <p><b>Behaviour:</b></p>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="withcats" id="withcats">
+                <label class="form-check-label" for="withcats">
+                    Gets along with other cats
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="withdogs" id="withdogs">
+                <label class="form-check-label" for="withdogs">
+                    Gets along with other dogs
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="withchildren" id="withchildren">
+                <label class="form-check-label" for="withchildren">
+                    Gets along with small children
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="na" id="na">
+                <label class="form-check-label" for="na">
+                    Not Applicable
+                </label>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary" onclick="validateForm(event)">Submit</button>
+              <button type="reset" class="btn btn-primary">Reset</button>
+          </form>
+          <br>
+        </div>
+        <br>
+    </main>
+<%- include('partials/footer') %>

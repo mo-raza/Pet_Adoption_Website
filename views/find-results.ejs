@@ -1,0 +1,19 @@
+<%- include('partials/header') %>
+<main>
+    <%- include('partials/sidebar') %>
+    <div class="content">
+        <h3>Search Results:</h3><br>
+        <% if (pets.length > 0) { %>
+            <ul>
+                <% pets.forEach(pet => { %>
+                    <li>
+                        <strong><%= pet.animal === 'Cat' ? 'Cat' : 'Dog' %>:</strong> <%= pet.breed %> | Age: <%= pet.age %> | Gender: <%= pet.gender === 'Male' ? 'Male' : 'Female' %> | Gets along with cats: <%= pet.withCats ? 'Yes' : 'No' %> | Gets along with dogs: <%= pet.withDogs ? 'Yes' : 'No' %> | Gets along with children: <%= pet.withChildren ? 'Yes' : 'No' %>
+                    </li>
+                <% }); %>
+            </ul>
+        <% } else { %>
+            <p><b>No pets found matching your criteria.</b></p><br>
+        <% } %>
+    </div>
+</main>
+<%- include('partials/footer') %>

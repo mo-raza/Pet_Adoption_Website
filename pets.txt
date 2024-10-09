@@ -1,0 +1,2 @@
+1:user1:Cat:Siamese:0-1:Male:1:0:0:0::john doe:johndoe@email.com
+2:user1:Dog:Labrador:1-5:Female:0:1:0:0::jane:jane@email.com
